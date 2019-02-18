@@ -1,0 +1,19 @@
+{
+  "name": "content-negotiationapp",
+  "version": "1.0.0",
+  "description": "content-negotiationApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roneicouto/content-negotiationApp.git"
+  },
+  "author": "roneicouto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roneicouto/content-negotiationApp/issues"
+  },
+  "homepage": "https://github.com/roneicouto/content-negotiationApp#readme"
+}
