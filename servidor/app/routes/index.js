@@ -1,5 +1,17 @@
 module.exports = function(application){
 	application.get('/', function(req, res){
-		res.send('Bem vindo a sua app NodeJS! - Servidor');
+		//Configuração para detectar e pegar em JSON ou TEXT/HTML
+		res.format({
+			html: function(){
+				res.send('Bem vindo ao NODEJS Servidor - Versão TEXT/HTML');
+			},
+			json: function() {
+				//criando uma variável em JSON
+				var retornoJSON = {
+					body : 'Bem vindo ao NODEJS Servidor - Versão JSON'
+				}
+				res.json(retornoJSON);
+			}
+		})
 	});
 }

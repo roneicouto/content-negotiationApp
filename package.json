@@ -4,7 +4,8 @@
   "description": "content-negotiationApp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/roneicouto/content-negotiationApp/issues"
   },
-  "homepage": "https://github.com/roneicouto/content-negotiationApp#readme"
+  "homepage": "https://github.com/roneicouto/content-negotiationApp#readme",
+  "dependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {}
 }
