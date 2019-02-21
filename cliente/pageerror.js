@@ -3,8 +3,8 @@ var http = require('http');
 var passagemPorJSON = {
     hostname: 'localhost',
     port: 80,
-    path: '/',
-    method: 'post',
+    path: '/teste',
+    method: 'get',
     headers: {
         //'Accept':'text/html'   - Para TEXT/HTML
         'Accept': 'application/json',
@@ -13,10 +13,13 @@ var passagemPorJSON = {
 }
 
 var buffer_corpo_response = [];
+
+/*
 var json = {nome : 'José'};
 var jsonToString = JSON.stringify(json);
+*/
 
-var reqHTTP = http.request(passagemPorJSON, function(res){
+var reqHTTP = http.get(passagemPorJSON, function(res){
 // Formatação para pegar do BUFFER o puro text/html
     // res.on('data', function(parteDaPaginaCarregada){
     //     buffer_corpo_response.push(parteDaPaginaCarregada);
@@ -28,8 +31,9 @@ var reqHTTP = http.request(passagemPorJSON, function(res){
     res.on('end', function(){
        var capturaResponseBuffer = Buffer.concat(buffer_corpo_response).toString();
        console.log(capturaResponseBuffer);
+       console.log(res.statusCode);
     })
 });
 
-reqHTTP.write(jsonToString);
+//reqHTTP.write(jsonToString);
 reqHTTP.end();
